@@ -33,17 +33,19 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
    
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-       let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        let refresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: webView, action: #selector(webView.reload))
+        let goBack = UIBarButtonItem(title: "back", style: .plain, target: webView, action: #selector(webView.goBack))
+        let goForeward = UIBarButtonItem(title: "foreward", style: .plain, target: webView, action: #selector(webView.goForward))
 
-       toolbarItems = [progressButton, spacer, refresh]
-    navigationController?.isToolbarHidden = false
+        toolbarItems = [progressButton, spacer, goBack, goForeward, refresh]
+        navigationController?.isToolbarHidden = false
         
         let url = URL(string: "https://" + websites[0])!
         webView.load(URLRequest(url: url))
 
         webView.allowsBackForwardNavigationGestures = true
         
-       webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         
     }
    @objc func openTapped(){
