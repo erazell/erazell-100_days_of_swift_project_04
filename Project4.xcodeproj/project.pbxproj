@@ -13,6 +13,7 @@
 		24DEA23C2465A52800485D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DEA23A2465A52800485D13 /* Main.storyboard */; };
 		24DEA23E2465A52A00485D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24DEA23D2465A52A00485D13 /* Assets.xcassets */; };
 		24DEA2412465A52A00485D13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24DEA23F2465A52A00485D13 /* LaunchScreen.storyboard */; };
+		24DEA24B246B1AFA00485D13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DEA24A246B1AFA00485D13 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		24DEA23D2465A52A00485D13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24DEA2402465A52A00485D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24DEA2422465A52A00485D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24DEA24A246B1AFA00485D13 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				24DEA2342465A52800485D13 /* AppDelegate.swift */,
 				24DEA2362465A52800485D13 /* SceneDelegate.swift */,
 				24DEA2382465A52800485D13 /* ViewController.swift */,
+				24DEA24A246B1AFA00485D13 /* MainViewController.swift */,
 				24DEA23A2465A52800485D13 /* Main.storyboard */,
 				24DEA23D2465A52A00485D13 /* Assets.xcassets */,
 				24DEA23F2465A52A00485D13 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				24DEA2392465A52800485D13 /* ViewController.swift in Sources */,
 				24DEA2352465A52800485D13 /* AppDelegate.swift in Sources */,
 				24DEA2372465A52800485D13 /* SceneDelegate.swift in Sources */,
+				24DEA24B246B1AFA00485D13 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

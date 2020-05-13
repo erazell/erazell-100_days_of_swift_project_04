@@ -13,7 +13,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites = ["apple.com", "hackingwithswift.com","ppe.pl", "google.com", "allegro.pl", "otomoto.pl", "onet.pl" ]
+    var currentWebsite: Int!
 
     
     override func loadView() {
@@ -24,6 +25,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard webView != nil && currentWebsite != nil else {
+            print("no website set")
+            return
+        }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Open", style: .plain, target: self, action: #selector(openTapped))
 
@@ -40,7 +46,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         toolbarItems = [progressButton, spacer, goBack, goForeward, refresh]
         navigationController?.isToolbarHidden = false
         
-        let url = URL(string: "https://" + websites[0])!
+        let url = URL(string: "https://" + websites[currentWebsite])!
         webView.load(URLRequest(url: url))
 
         webView.allowsBackForwardNavigationGestures = true
@@ -48,6 +54,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
         
     }
+    
+    
+    
    @objc func openTapped(){
     let ac = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
     for website in websites{
